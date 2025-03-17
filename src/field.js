@@ -13,6 +13,7 @@ class Field {
   #allFieldPositions;
   #selectedPositions;
   #player;
+
   constructor(player) {
     this.#player = player;
     this.#allFieldPositions = JSON.parse(
@@ -29,15 +30,17 @@ class Field {
     return Object.entries(this.#allFieldPositions);
   }
 
-  setPlayer(position) {
-    const isItAPosition = position in this.#allFieldPositions;
-    const isPositionEmpty = !this.#selectedPositions.has(position);
-    const shouldIAdd = isPositionEmpty && isItAPosition; // change variable name
+  setFielder(position) {
+    const isValidPosition = position in this.#allFieldPositions;
+    const isPositionAvailable = !this.#selectedPositions.has(position);
+    const isValidAndAvailable = isPositionAvailable && isValidPosition;
 
-    if (shouldIAdd) {
+    if (isValidAndAvailable) {
       this.#selectedPositions.add(position);
     }
 
-    return shouldIAdd;
+    return isValidAndAvailable;
   }
 }
+
+export { Toss, Field };
