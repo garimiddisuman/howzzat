@@ -27,7 +27,11 @@ class Field {
   }
 
   showAllFields() {
-    return Object.entries(this.#allFieldPositions);
+    return this.#allFieldPositions;
+  }
+
+  showSelectedFields() {
+    return this.#selectedPositions;
   }
 
   setFielder(position) {
@@ -40,6 +44,34 @@ class Field {
     }
 
     return isValidAndAvailable;
+  }
+  
+  removeFielder(position) {
+    const isValidPosition = position in this.#allFieldPositions;
+    const isPositionNotAvailable = this.#selectedPositions.has(position);
+    const isValidAndNotAvailable = isPositionNotAvailable && isValidPosition;
+  
+    if (isValidAndNotAvailable) {
+      this.#selectedPositions.delete(position);
+    }
+  
+    return isValidAndNotAvailable;
+  }
+
+  setMultipleFielders(positions) {
+    return positions.reduce((success, position) => {
+      const result = this.setFielder(position);
+      success[position] = result;
+      return success;
+    }, {});
+  }
+
+  removeMultipleFielders(positions) {
+    return positions.reduce((success, position) => {
+      const result = this.removeFielder(position);
+      success[position] = result;
+      return success;
+    }, {});
   }
 }
 
