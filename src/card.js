@@ -1,7 +1,6 @@
 import positions from "../data/field-positions.json" with {type: "json"};
 import lodash from "lodash";
 
-
 const cards = [
   {
     shot: 'Cover Drive',
@@ -93,6 +92,7 @@ class Deck {
     this.cards = lodash.shuffle(this.originalDeck);
   }
 }
+
 
 const main = () => {
   const cardDeck = new Deck(cards);
