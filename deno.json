@@ -19,5 +19,8 @@
     "lineWidth": 80,
     "semiColons": true,
     "singleQuote": true
+  },
+  "imports": {
+    "lodash": "npm:lodash@^4.17.21"
   }
 }
