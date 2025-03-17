@@ -79,20 +79,27 @@ class Field {
 class Scorecard {
   #player;
   #runs;
-  #wicketsCount;
+  #wickets;
+  #ballsPlayed;
 
   constructor(player) {
     this.#player = player;
     this.#runs = 0;
-    this.#wicketsCount = [];
+    this.#ballsPlayed = 0;
+    this.#wickets = [];
   }
 
-  addRuns(runs) {
+  updateRuns(runs) {
     this.#runs += runs;
   }
 
-  addWickets(kind) {
-    return this.#wicketsCount.push(kind);
+  updateWickets(kind) {
+    return this.#wickets.push(kind);
+  }
+
+  updateBallsPlayed() {
+    this.#ballsPlayed += 1;
+    return this.#ballsPlayed;
   }
 
   get runs() {
@@ -100,7 +107,20 @@ class Scorecard {
   }
 
   get wickets() {
-    return this.#wicketsCount;
+    return this.#wickets;
+  }
+
+  get ballsPlayed() {
+    return this.#ballsPlayed;
+  }
+
+  get summary() {
+    const player = this.#player;
+    const runs = this.#runs;
+    const ballsPlayed = this.#ballsPlayed;
+    const wickets = this.#wickets;
+
+    return { player, runs, ballsPlayed, wickets };
   }
 }
 
