@@ -19,6 +19,7 @@ class Field {
     this.#allFieldPositions = JSON.parse(
       Deno.readTextFileSync("./data/field-positions.json")
     );
+
     this.#selectedPositions = new Set();
   }
 
@@ -26,7 +27,7 @@ class Field {
     return player === this.#player;
   }
 
-  showAllFields() {
+  get showAllFields() {
     return this.#allFieldPositions;
   }
 
@@ -45,16 +46,16 @@ class Field {
 
     return isValidAndAvailable;
   }
-  
+
   removeFielder(position) {
     const isValidPosition = position in this.#allFieldPositions;
     const isPositionNotAvailable = this.#selectedPositions.has(position);
     const isValidAndNotAvailable = isPositionNotAvailable && isValidPosition;
-  
+
     if (isValidAndNotAvailable) {
       this.#selectedPositions.delete(position);
     }
-  
+
     return isValidAndNotAvailable;
   }
 
@@ -75,4 +76,32 @@ class Field {
   }
 }
 
-export { Toss, Field };
+class scoreCard {
+  #player;
+  #runs;
+  #wicketsCount;
+
+  constructor(player) {
+    this.#player = player;
+    this.#runs = 0;
+    this.#wicketsCount = [];
+  }
+
+  addRuns(runs) {
+    this.#runs += runs;
+  }
+
+  addWickets(kind) {
+    return this.#wicketsCount.push(kind);
+  }
+
+  get runs() {
+    return this.#runs;
+  }
+
+  get wickets() {
+    return this.#wicketsCount;
+  }
+}
+
+export { Field, Toss, scoreCard };
