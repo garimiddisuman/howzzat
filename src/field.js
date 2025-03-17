@@ -12,18 +12,12 @@ class Toss {
 class Field {
   #allFieldPositions;
   #selectedPositions;
-  #player;
 
-  constructor(player) {
-    this.#player = player;
+  constructor() {
     this.#allFieldPositions = JSON.parse(
       Deno.readTextFileSync("./data/field-positions.json")
     );
     this.#selectedPositions = new Set();
-  }
-
-  isPlayerSame(player) {
-    return player === this.#player;
   }
 
   showAllFields() {
@@ -36,8 +30,10 @@ class Field {
 
   setFielder(position) {
     const isValidPosition = position in this.#allFieldPositions;
-    const isPositionAvailable = !this.#selectedPositions.has(position);
-    const isValidAndAvailable = isPositionAvailable && isValidPosition;
+    const isPositionAvailable = !this.isFielderPresent(position);
+    const isFieldPositionsFull = this.#selectedPositions.size >= 11;
+    const isValidAndAvailable =
+      isPositionAvailable && isValidPosition && !isFieldPositionsFull;
 
     if (isValidAndAvailable) {
       this.#selectedPositions.add(position);
@@ -45,16 +41,16 @@ class Field {
 
     return isValidAndAvailable;
   }
-  
+
   removeFielder(position) {
     const isValidPosition = position in this.#allFieldPositions;
-    const isPositionNotAvailable = this.#selectedPositions.has(position);
+    const isPositionNotAvailable = this.isFielderPresent(position);
     const isValidAndNotAvailable = isPositionNotAvailable && isValidPosition;
-  
+
     if (isValidAndNotAvailable) {
       this.#selectedPositions.delete(position);
     }
-  
+
     return isValidAndNotAvailable;
   }
 
@@ -72,6 +68,10 @@ class Field {
       success[position] = result;
       return success;
     }, {});
+  }
+
+  isFielderPresent(position) {
+    return this.#selectedPositions.has(position);
   }
 }
 
