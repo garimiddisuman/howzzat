@@ -76,7 +76,7 @@ class Field {
   }
 }
 
-class scoreCard {
+class Scorecard {
   #player;
   #runs;
   #wicketsCount;
@@ -104,4 +104,4 @@ class scoreCard {
   }
 }
 
-export { Field, Toss, scoreCard };
+export { Field, Toss, Scorecard };
