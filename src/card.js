@@ -6,7 +6,7 @@ export class Deck {
     this.cards = [];
     this.reShuffle();
   }
-  
+
   reShuffle() {
     this.cards = lodash.shuffle(this.originalDeck);
   }

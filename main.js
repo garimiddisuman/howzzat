@@ -12,6 +12,20 @@ const setFielders = (field) => {
   return field.showSelectedFields.size === 11 ? true : setFielders(field);
 }
 
+const ballsToOvers = (totalBalls) => {
+  const overs = Math.floor(totalBalls/6)
+  const balls = totalBalls%6;
+
+  return `${overs}.${balls}`
+}
+
+const displayCurrentScore = (scorecard,runs)=> {
+  console.log("Runs For This Ball : ",runs)
+  console.log("Total Runs Scored : ", scorecard.runs)
+  console.log("Wickets : ", scorecard.wickets.length)
+  console.log("Overs : ", ballsToOvers(scorecard.incrementBallCount()))
+}
+
 const ballAnalysis = (ballDetails, scorecard) => {
   const { runs, wicket } = ballDetails;
   scorecard.addRuns(runs);
@@ -20,7 +34,7 @@ const ballAnalysis = (ballDetails, scorecard) => {
     scorecard.recordWickets(wicket.kind);
   }
 
-  console.log(scorecard.summary())
+  displayCurrentScore(scorecard, runs)
 }
 
 const cardBreakdown = (card, field) => {
@@ -41,14 +55,28 @@ const startGame = (deck, field, scorecard) => {
     const ballDetails = cardBreakdown(card, field);
     ballAnalysis(ballDetails, scorecard);
   }
+
+  return scorecard.summary()
 };
 
-const main = () => {
+const inning = (playerName) => {
   const deck = new Deck(cards);
   const field = new Field();
-  const scorecard = new Scorecard('surendra');
+  const scorecard = new Scorecard(playerName);
+  
+ return  startGame(deck, field, scorecard);
 
-  startGame(deck, field, scorecard);
+}
+
+const main = () => {
+  const player1 = prompt("enter player one name");
+  const player2 = prompt("enter player two name");
+
+  const playerOneSummary  = inning(player1);
+  console.log(playerOneSummary);
+  console.log(`----------Target score: ${playerOneSummary.runs + 1}----------`)
+  const playerTwoSummary  = inning(player2);
+  console.log(playerTwoSummary);
 };
 
 main();
