@@ -56,19 +56,13 @@ class Field {
   }
 
   setMultipleFielders(positions) {
-    return positions.reduce((success, position) => {
-      const result = this.setFielder(position);
-      success[position] = result;
-      return success;
-    }, {});
+    const success = positions.map((pos) => [pos, this.setFielder(pos)]);
+    return Object.fromEntries(success);
   }
 
   removeMultipleFielders(positions) {
-    return positions.reduce((success, position) => {
-      const result = this.removeFielder(position);
-      success[position] = result;
-      return success;
-    }, {});
+    const success = positions.map((pos) => [pos, this.removeFielder(pos)]);
+    return Object.fromEntries(success);
   }
 
   isFielderPresent(position) {
