@@ -35,4 +35,4 @@ const main = () => {
 
 main();
 
-export { Deck};
+export { Deck };
