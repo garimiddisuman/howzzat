@@ -18,7 +18,7 @@ class Field {
       Deno.readTextFileSync("./data/field-positions.json")
     );
 
-    this.#selectedPositions = new Set();
+    this.#selectedPositions = new Set([25, 26]);
   }
 
   get showAllFields() {
@@ -46,7 +46,9 @@ class Field {
   removeFielder(position) {
     const isValidPosition = position in this.#allFieldPositions;
     const isPositionNotAvailable = this.isFielderPresent(position);
-    const isValidAndNotAvailable = isPositionNotAvailable && isValidPosition;
+    const bowlerOrWicketKeeper = [25, 26].map(String).includes(position);
+    const isValidAndNotAvailable =
+      isPositionNotAvailable && isValidPosition && !bowlerOrWicketKeeper;
 
     if (isValidAndNotAvailable) {
       this.#selectedPositions.delete(position);
