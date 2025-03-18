@@ -1,7 +1,9 @@
+import allPositions from "../data/field-positions.json" with {type: "json"}
+
 class Toss {
   #choices;
   constructor() {
-    this.#choices = { 1: "batting", 2: "fielding" };
+    this.#choices = { 1: 'batting', 2: 'fielding' };
   }
 
   get decision() {
@@ -14,11 +16,8 @@ class Field {
   #selectedPositions;
 
   constructor() {
-    this.#allFieldPositions = JSON.parse(
-      Deno.readTextFileSync("./data/field-positions.json")
-    );
-
-    this.#selectedPositions = new Set([25, 26]);
+    this.#allFieldPositions = allPositions;
+    this.#selectedPositions = new Set();
   }
 
   get showAllFields() {
@@ -58,19 +57,13 @@ class Field {
   }
 
   setMultipleFielders(positions) {
-    return positions.reduce((success, position) => {
-      const result = this.setFielder(position);
-      success[position] = result;
-      return success;
-    }, {});
+    const success = positions.map((pos) => [pos, this.setFielder(pos)]);
+    return Object.fromEntries(success);
   }
 
   removeMultipleFielders(positions) {
-    return positions.reduce((success, position) => {
-      const result = this.removeFielder(position);
-      success[position] = result;
-      return success;
-    }, {});
+    const success = positions.map((pos) => [pos, this.removeFielder(pos)]);
+    return Object.fromEntries(success);
   }
 
   isFielderPresent(position) {
