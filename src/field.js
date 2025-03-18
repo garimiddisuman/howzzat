@@ -1,15 +1,5 @@
+
 import allPositions from "../data/field-positions.json" with {type: "json"}
-
-class Toss {
-  #choices;
-  constructor() {
-    this.#choices = { 1: 'batting', 2: 'fielding' };
-  }
-
-  get decision() {
-    return this.#choices[1];
-  }
-}
 
 class Field {
   #allFieldPositions;
