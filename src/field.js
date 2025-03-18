@@ -1,16 +1,5 @@
 import allPositions from "../data/field-positions.json" with {type: "json"}
 
-class Toss {
-  #choices;
-  constructor() {
-    this.#choices = { 1: 'batting', 2: 'fielding' };
-  }
-
-  get decision() {
-    return this.#choices[1];
-  }
-}
-
 class Field {
   #allFieldPositions;
   #selectedPositions;
@@ -28,7 +17,7 @@ class Field {
     return this.#selectedPositions;
   }
 
-  setFielder(position) {
+  #setFielder(position) {
     const isValidPosition = position in this.#allFieldPositions;
     const isPositionAvailable = !this.isFielderPresent(position);
     const isFieldPositionsFull = this.#selectedPositions.size >= 11;
@@ -42,7 +31,7 @@ class Field {
     return isValidAndAvailable;
   }
 
-  removeFielder(position) {
+  #removeFielder(position) {
     const isValidPosition = position in this.#allFieldPositions;
     const isPositionNotAvailable = this.isFielderPresent(position);
     const isValidAndNotAvailable = isPositionNotAvailable && isValidPosition;
@@ -55,12 +44,12 @@ class Field {
   }
 
   setMultipleFielders(positions) {
-    const success = positions.map((pos) => [pos, this.setFielder(pos)]);
+    const success = positions.map((pos) => [pos, this.#setFielder(pos)]);
     return Object.fromEntries(success);
   }
 
   removeMultipleFielders(positions) {
-    const success = positions.map((pos) => [pos, this.removeFielder(pos)]);
+    const success = positions.map((pos) => [pos, this.#removeFielder(pos)]);
     return Object.fromEntries(success);
   }
 
