@@ -1,5 +1,5 @@
-import positions from "../data/field-positions.json" with {type: "json"};
-import lodash from "lodash";
+// import positions from "../data/field-positions.json" with {type: "json"};
+import lodash from 'lodash';
 
 const cards = [
   {
@@ -93,22 +93,22 @@ class Deck {
   }
 }
 
-
 const main = () => {
   const cardDeck = new Deck(cards);
-  console.log("red Deck:", cardDeck.cards);
-  
-  console.log("First Card Drawn:", cardDeck.drawCard());
-  console.log("Second Card Drawn:", cardDeck.drawCard());
-  
+  console.log('red Deck:', cardDeck.cards);
+
+  console.log('First Card Drawn:', cardDeck.drawCard());
+  console.log('Second Card Drawn:', cardDeck.drawCard());
+
   if (!cardDeck.hasCards()) {
     cardDeck.reShuffle();
-    console.log("Deck Reshuffled:", cardDeck.cards);
+    console.log('Deck Reshuffled:', cardDeck.cards);
   }
-}
+};
 
 main();
 
+export { Deck};
 // class CardDeck {
 //   constructor(cards) {
 //     this.cards = [...cards];
