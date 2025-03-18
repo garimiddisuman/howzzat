@@ -1,5 +1,4 @@
-import lodash from 'lodash';
-import cards from "../data/cards.json" with {type :"json"}
+import lodash from "lodash";
 
 class Deck {
   constructor(cards) {
@@ -19,20 +18,5 @@ class Deck {
     this.cards = lodash.shuffle(this.originalDeck);
   }
 }
-
-const main = () => {
-  const cardDeck = new Deck(cards);
-  console.log('red Deck:', cardDeck.cards);
-
-  console.log('First Card Drawn:', cardDeck.drawCard());
-  console.log('Second Card Drawn:', cardDeck.drawCard());
-
-  if (!cardDeck.hasCards()) {
-    cardDeck.reShuffle();
-    console.log('Deck Reshuffled:', cardDeck.cards);
-  }
-};
-
-main();
 
 export { Deck };
