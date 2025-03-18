@@ -4,18 +4,22 @@ import cards from "../data/cards.json" with {type: "json"};
 export class Deck {
   constructor() {
     this.originalDeck = [...cards];
-    this.cards = lodash.shuffle(this.originalDeck);
+    this.cards = this.reShuffle();
   }
-
-  drawCard() {
-    return this.cards.length ? this.cards.shift() : null;
+  
+  reShuffle() {
+    return lodash.shuffle(this.originalDeck);
   }
 
   hasCards() {
-    return this.cards.length > 0;
+    return this.cards.length > 5;
   }
 
-  reShuffle() {
-    this.cards = lodash.shuffle(this.originalDeck);
+  drawCard() {
+    if (!this.hasCards()) {
+      this.cards = this.reShuffle();
+    }
+
+    return this.cards.shift();
   }
 }
