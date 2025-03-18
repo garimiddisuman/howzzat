@@ -1,6 +1,6 @@
-// import allPositions from "../data/field-positions.json" with {type: "json"}
+import allPositions from "../data/field-positions.json" with {type: "json"}
 
-class Field {
+export class Field {
   #fieldPositions;
   #selectedPositions;
 
@@ -15,6 +15,10 @@ class Field {
 
   get showSelectedFields() {
     return this.#selectedPositions;
+  }
+
+  hasFielder(position) {
+    return this.#selectedPositions.has(position);
   }
 
   #addFielder(position) {
@@ -58,58 +62,4 @@ class Field {
     const success = positions.map((pos) => [pos, this.#removeFielder(pos)]);
     return Object.fromEntries(success);
   }
-
-  hasFielder(position) {
-    return this.#selectedPositions.has(position);
-  }
 }
-
-class Scorecard {
-  #player;
-  #runs;
-  #wickets;
-  #ballsPlayed;
-
-  constructor(player) {
-    this.#player = player;
-    this.#runs = 0;
-    this.#ballsPlayed = 0;
-    this.#wickets = [];
-  }
-
-  updateRuns(runs) {
-    this.#runs += runs;
-  }
-
-  recordWickets(kind) {
-    return this.#wickets.push(kind);
-  }
-
-  updateBallsPlayed() {
-    this.#ballsPlayed += 1;
-    return this.#ballsPlayed;
-  }
-
-  get runs() {
-    return this.#runs;
-  }
-
-  get wickets() {
-    return this.#wickets;
-  }
-
-  get ballsPlayed() {
-    return this.#ballsPlayed;
-  }
-
-  get summary() {
-    const player = this.#player;
-    const runs = this.#runs;
-    const ballsPlayed = this.#ballsPlayed;
-    const wickets = this.#wickets;
-
-    return { player, runs, ballsPlayed, wickets };
-  }
-}
-
-export { Field, Scorecard };
