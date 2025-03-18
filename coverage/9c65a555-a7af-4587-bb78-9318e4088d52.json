@@ -1,0 +1,14 @@
+{
+  "scriptId": "323",
+  "url": "file:///Users/priyankushpal/Library/Caches/deno/npm/registry.npmjs.org/lodash/4.17.21/lodash.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [
+        { "startOffset": 0, "endOffset": 581, "count": 1 },
+        { "startOffset": 200, "endOffset": 350, "count": 0 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}
