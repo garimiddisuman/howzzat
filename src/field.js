@@ -1,26 +1,25 @@
-
-import allPositions from "../data/field-positions.json" with {type: "json"}
+// import allPositions from "../data/field-positions.json" with {type: "json"}
 
 class Field {
-  #allFieldPositions;
+  #fieldPositions;
   #selectedPositions;
 
   constructor() {
-    this.#allFieldPositions = allPositions;
-    this.#selectedPositions = new Set();
+    this.#fieldPositions = allPositions;
+    this.#selectedPositions = new Set([25, 26]);
   }
 
   get showAllFields() {
-    return this.#allFieldPositions;
+    return this.#fieldPositions;
   }
 
   get showSelectedFields() {
     return this.#selectedPositions;
   }
 
-  setFielder(position) {
-    const isValidPosition = position in this.#allFieldPositions;
-    const isPositionAvailable = !this.isFielderPresent(position);
+  #addFielder(position) {
+    const isValidPosition = position in this.#fieldPositions;
+    const isPositionAvailable = !this.hasFielder(position);
     const isFieldPositionsFull = this.#selectedPositions.size >= 11;
     const isValidAndAvailable =
       isPositionAvailable && isValidPosition && !isFieldPositionsFull;
@@ -32,12 +31,16 @@ class Field {
     return isValidAndAvailable;
   }
 
-  removeFielder(position) {
-    const isValidPosition = position in this.#allFieldPositions;
-    const isPositionNotAvailable = this.isFielderPresent(position);
-    const bowlerOrWicketKeeper = [25, 26].map(String).includes(position);
+  #isKeeperOrBowler(position) {
+    return [25, 26].map(String).includes(position);
+  }
+
+  #removeFielder(position) {
+    const isPositionOccupied = position in this.#fieldPositions;
+    const isPositionEmpty = this.hasFielder(position);
+    const bowlerOrWicketKeeper = this.#isKeeperOrBowler(position);
     const isValidAndNotAvailable =
-      isPositionNotAvailable && isValidPosition && !bowlerOrWicketKeeper;
+      isPositionEmpty && isPositionOccupied && !bowlerOrWicketKeeper;
 
     if (isValidAndNotAvailable) {
       this.#selectedPositions.delete(position);
@@ -47,16 +50,16 @@ class Field {
   }
 
   setMultipleFielders(positions) {
-    const success = positions.map((pos) => [pos, this.setFielder(pos)]);
+    const success = positions.map((pos) => [pos, this.#addFielder(pos)]);
     return Object.fromEntries(success);
   }
 
   removeMultipleFielders(positions) {
-    const success = positions.map((pos) => [pos, this.removeFielder(pos)]);
+    const success = positions.map((pos) => [pos, this.#removeFielder(pos)]);
     return Object.fromEntries(success);
   }
 
-  isFielderPresent(position) {
+  hasFielder(position) {
     return this.#selectedPositions.has(position);
   }
 }
@@ -78,7 +81,7 @@ class Scorecard {
     this.#runs += runs;
   }
 
-  updateWickets(kind) {
+  recordWickets(kind) {
     return this.#wickets.push(kind);
   }
 
@@ -109,4 +112,4 @@ class Scorecard {
   }
 }
 
-export { Field, Toss, Scorecard };
+export { Field, Scorecard };

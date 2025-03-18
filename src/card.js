@@ -1,4 +1,4 @@
-import lodash from "lodash";
+import lodash from 'lodash';
 
 class Deck {
   constructor(cards) {
