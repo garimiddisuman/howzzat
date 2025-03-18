@@ -1,14 +1,14 @@
 import lodash from 'lodash';
-// import cards from "../data/cards.json" with {type: "json"};
 
 export class Deck {
   constructor(cards) {
     this.originalDeck = [...cards];
-    this.cards = this.reShuffle();
+    this.cards = [];
+    this.reShuffle();
   }
   
   reShuffle() {
-    return lodash.shuffle(this.originalDeck);
+    this.cards = lodash.shuffle(this.originalDeck);
   }
 
   hasCards() {
@@ -17,7 +17,7 @@ export class Deck {
 
   drawCard() {
     if (!this.hasCards()) {
-      this.cards = this.reShuffle();
+      this.reShuffle();
     }
 
     return this.cards.shift();

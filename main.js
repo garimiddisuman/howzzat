@@ -1,7 +1,7 @@
 import { Deck } from './src/card.js';
 import { Field } from './src/field.js';
 import { Scorecard } from './src/scorecard.js';
-
+import cards from "./data/cards.json" with {type: "json"};
 
 const setFielders = (field) => {
   console.log(field.showAllFields);
@@ -44,7 +44,7 @@ const startGame = (deck, field, scorecard) => {
 };
 
 const main = () => {
-  const deck = new Deck();
+  const deck = new Deck(cards);
   const field = new Field();
   const scorecard = new Scorecard('surendra');
 

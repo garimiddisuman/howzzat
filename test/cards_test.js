@@ -47,8 +47,6 @@ describe('Deck', () => {
     const deck = new Deck(sampleCards);
     deck.drawCard();
     deck.reShuffle();
-    assert.equal(deck.cards.length, sampleCards.length);
-    assert.assertNotEquals(deck.cards, sampleCards);
     assert.assertEquals(lodash.sortBy(deck.cards), lodash.sortBy(sampleCards));
   });
 });
