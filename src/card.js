@@ -1,7 +1,8 @@
 import lodash from 'lodash';
+import cards from "../data/cards.json" with {type: "json"};
 
-class Deck {
-  constructor(cards) {
+export class Deck {
+  constructor() {
     this.originalDeck = [...cards];
     this.cards = lodash.shuffle(this.originalDeck);
   }
@@ -18,5 +19,3 @@ class Deck {
     this.cards = lodash.shuffle(this.originalDeck);
   }
 }
-
-export { Deck };
