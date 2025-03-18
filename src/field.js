@@ -16,7 +16,6 @@ export class Field {
     return this.#selectedPositions;
   }
 
-
   hasFielder(position) {
     return this.#selectedPositions.has(position);
   }
