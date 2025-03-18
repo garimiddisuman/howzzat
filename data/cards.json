@@ -1,62 +1,627 @@
 [
   {
+    "shot": "Drive",
+    "position": 1,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Cut",
+    "position": 1,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Glance",
+    "position": 1,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 1,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Defensive",
+    "position": 2,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 2,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 2,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 2,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 3,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 3,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Cut",
+    "position": 3,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 3,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Cut",
+    "position": 4,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Defensive",
+    "position": 4,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 4,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 4,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Cut",
+    "position": 5,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 5,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 5,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 5,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Defensive",
+    "position": 6,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Forward Defense",
+    "position": 6,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Cut",
+    "position": 6,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 6,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Drive",
+    "position": 7,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 7,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 7,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 7,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 8,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 8,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 8,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 8,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+
+  {
     "shot": "Cover Drive",
     "position": 9,
     "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 9,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 9,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 9,
+    "fielderPresent": { "runs": 0 },
     "fielderAbsent": { "runs": 4 }
   },
   {
-    "shot": "Pull Shot",
-    "position": 13,
-    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
-    "fielderAbsent": { "runs": 6 }
+    "shot": "Cover Drive",
+    "position": 10,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
   },
   {
-    "shot": "Straight Drive",
+    "shot": "Square Drive",
+    "position": 10,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 10,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 10,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Drive",
+    "position": 11,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 11,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 11,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 11,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Drive",
     "position": 12,
-    "fielderPresent": { "runs": 1 },
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 12,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 12,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 12,
+    "fielderPresent": { "runs": 0 },
     "fielderAbsent": { "runs": 4 }
   },
   {
-    "shot": "Cut Shot",
-    "position": 5,
-    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "shot": "Drive",
+    "position": 13,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 13,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Pull",
+    "position": 13,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Leg Glance",
+    "position": 13,
+    "fielderPresent": { "runs": 0 },
     "fielderAbsent": { "runs": 4 }
   },
   {
-    "shot": "Lofted Shot",
-    "position": 21,
+    "shot": "Drive",
+    "position": 14,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 14,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 14,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 14,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Pull",
+    "position": 15,
     "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
-    "fielderAbsent": { "runs": 6 }
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Leg Glance",
+    "position": 15,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Sweep",
+    "position": 15,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 15,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Pull",
+    "position": 16,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
   },
   {
     "shot": "Glance",
     "position": 16,
-    "fielderPresent": { "runs": 1 },
-    "fielderAbsent": { "runs": 4 }
-  },
-  {
-    "shot": "Defensive Block",
-    "position": 6,
     "fielderPresent": { "runs": 0 },
-    "fielderAbsent": { "runs": 0 }
+    "fielderAbsent": { "runs": 2 }
   },
   {
-    "shot": "Sweep Shot",
-    "position": 15,
+    "shot": "Sweep",
+    "position": 16,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 16,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Pull",
+    "position": 17,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Glance",
+    "position": 17,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Sweep",
+    "position": 17,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 17,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Pull",
+    "position": 18,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Glance",
+    "position": 18,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Sweep",
+    "position": 18,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 18,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Pull",
+    "position": 19,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Glance",
+    "position": 19,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Sweep",
+    "position": 19,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 19,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Drive",
+    "position": 20,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 20,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 20,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 20,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Drive",
+    "position": 21,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 21,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 21,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 21,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Cover Drive",
+    "position": 22,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 22,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 22,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 22,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 23,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Cut",
+    "position": 23,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Cut",
+    "position": 23,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 23,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Cut",
+    "position": 24,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Square Cut",
+    "position": 24,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Square Drive",
+    "position": 24,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 24,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
+  },
+  {
+    "shot": "Late Cut",
+    "position": 25,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
+  },
+  {
+    "shot": "Glance",
+    "position": 25,
+    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Defensive Shot",
+    "position": 25,
+    "fielderPresent": { "wicket": { "kind": "Stumped" }, "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Drive",
+    "position": 25,
     "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
     "fielderAbsent": { "runs": 4 }
   },
   {
-    "shot": "Upper Cut",
-    "position": 23,
-    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
-    "fielderAbsent": { "runs": 6 }
+    "shot": "Drive",
+    "position": 26,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 1 }
   },
   {
-    "shot": "Helicopter Shot",
-    "position": 12,
-    "fielderPresent": { "runs": 2 },
-    "fielderAbsent": { "runs": 6 }
+    "shot": "Cover Drive",
+    "position": 26,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 2 }
+  },
+  {
+    "shot": "Cut",
+    "position": 26,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 3 }
+  },
+  {
+    "shot": "Pull",
+    "position": 26,
+    "fielderPresent": { "runs": 0 },
+    "fielderAbsent": { "runs": 4 }
   }
 ]
