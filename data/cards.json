@@ -8,7 +8,7 @@
   {
     "shot": "Cut",
     "position": 1,
-    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderPresent": { "runs": 0 },
     "fielderAbsent": { "runs": 1 }
   },
   {
@@ -26,7 +26,7 @@
   {
     "shot": "Defensive",
     "position": 2,
-    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderPresent": { "runs": 0 },
     "fielderAbsent": { "runs": 1 }
   },
   {
@@ -339,7 +339,7 @@
   {
     "shot": "Pull",
     "position": 15,
-    "fielderPresent": { "wicket": { "kind": "Caught" }, "runs": 0 },
+    "fielderPresent": {  "runs": 0 },
     "fielderAbsent": { "runs": 1 }
   },
   {

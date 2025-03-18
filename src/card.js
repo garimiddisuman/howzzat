@@ -12,7 +12,7 @@ export class Deck {
   }
 
   hasCards() {
-    return this.cards.length > 5;
+    return this.cards.length > 50;
   }
 
   drawCard() {

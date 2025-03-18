@@ -49,7 +49,7 @@ const cardBreakdown = (card, field) => {
 
 const startGame = (deck, field, scorecard) => {
   setFielders(field);
-  while (scorecard.wickets.length !== 3) {
+  while (scorecard.wickets.length !== 10) {
     prompt("next round :");
     const card = deck.drawCard();
     const ballDetails = cardBreakdown(card, field);
