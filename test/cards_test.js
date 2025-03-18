@@ -18,7 +18,7 @@ describe('Deck', () => {
     'Jack of Spades',
     'Queen of Spades',
     'King of Spades',
-  ];
+  ]; 
 
   it('should create a deck with the given cards shuffled', () => {
     const deck = new Deck(sampleCards);

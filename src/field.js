@@ -106,4 +106,4 @@ class Scorecard {
   }
 }
 
-export { Field, Toss, Scorecard };
+export { Field, Scorecard };
