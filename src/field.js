@@ -1,7 +1,9 @@
+import allPositions from "../data/field-positions.json" with {type: "json"}
+
 class Toss {
   #choices;
   constructor() {
-    this.#choices = { 1: "batting", 2: "fielding" };
+    this.#choices = { 1: 'batting', 2: 'fielding' };
   }
 
   get decision() {
@@ -14,10 +16,7 @@ class Field {
   #selectedPositions;
 
   constructor() {
-    this.#allFieldPositions = JSON.parse(
-      Deno.readTextFileSync("./data/field-positions.json")
-    );
-
+    this.#allFieldPositions = allPositions;
     this.#selectedPositions = new Set();
   }
 
