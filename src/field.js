@@ -1,21 +1,10 @@
-class Toss {
-  #choices;
-  constructor() {
-    this.#choices = { 1: "batting", 2: "fielding" };
-  }
-
-  get decision() {
-    return this.#choices[1];
-  }
-}
-
 class Field {
   #allFieldPositions;
   #selectedPositions;
 
   constructor() {
     this.#allFieldPositions = JSON.parse(
-      Deno.readTextFileSync("./data/field-positions.json")
+      Deno.readTextFileSync('./data/field-positions.json')
     );
 
     this.#selectedPositions = new Set();
