@@ -1,5 +1,5 @@
 import { Deck } from '../src/card.js';
-import * as assert from 'jsr:@std/assert';
+import * as assert from 'assert';
 import { describe, it } from 'jsr:@std/testing/bdd';
 import lodash from 'lodash';
 
